@@ -1,7 +1,7 @@
 /*Now the CSS*/
 * {margin: 0; padding: 0;}
 
-.tree ul {
+.tree .ultree {
 	padding-top: 20px; position: relative;
 	
 	transition: all 0.5s;
@@ -9,7 +9,7 @@
 	-moz-transition: all 0.5s;
 }
 
-.tree li {
+.tree .litree {
 	float: left; text-align: center;
 	list-style-type: none;
 	position: relative;
@@ -22,53 +22,53 @@
 
 /*We will use ::before and ::after to draw the connectors*/
 
-.tree li::before, .tree li::after{
+.tree .litree::before, .tree li::after{
 	content: '';
 	position: absolute; top: 0; right: 50%;
 	border-top: 1px solid #ccc;
 	width: 50%; height: 20px;
 }
-.tree li::after{
+.tree .litree::after{
 	right: auto; left: 50%;
 	border-left: 1px solid #ccc;
 }
 
 /*We need to remove left-right connectors from elements without 
 any siblings*/
-.tree li:only-child::after, .tree li:only-child::before {
+.tree .litree:only-child::after, .tree li:only-child::before {
 	display: none;
 }
 
 /*Remove space from the top of single children*/
-.tree li:only-child{ padding-top: 0;}
+.tree .litree:only-child{ padding-top: 0;}
 
 /*Remove left connector from first child and 
 right connector from last child*/
-.tree li:first-child::before, .tree li:last-child::after{
+.tree .litree:first-child::before, .tree li:last-child::after{
 	border: 0 none;
 }
 /*Adding back the vertical connector to the last nodes*/
-.tree li:last-child::before{
+.tree .litree:last-child::before{
 	border-right: 1px solid #ccc;
 	border-radius: 0 5px 0 0;
 	-webkit-border-radius: 0 5px 0 0;
 	-moz-border-radius: 0 5px 0 0;
 }
-.tree li:first-child::after{
+.tree .litree:first-child::after{
 	border-radius: 5px 0 0 0;
 	-webkit-border-radius: 5px 0 0 0;
 	-moz-border-radius: 5px 0 0 0;
 }
 
 /*Time to add downward connectors from parents*/
-.tree ul ul::before{
+.tree .ultree .ultree::before{
 	content: '';
 	position: absolute; top: 0; left: 50%;
 	border-left: 1px solid #ccc;
 	width: 0; height: 20px;
 }
 
-.tree li a{
+.tree .litree .atree{
 	border: 1px solid #ccc;
 	padding: 5px 10px;
 	text-decoration: none;
@@ -88,16 +88,43 @@ right connector from last child*/
 
 /*Time for some hover effects*/
 /*We will apply the hover effect the the lineage of the element also*/
-.tree li a:hover, .tree li a:hover+ul li a {
+.tree .litree .atree:hover, .tree .litree .atree:hover+.ultree .litree .atree {
 	background: #e9453f; color: #000; border: 1px solid #e9453f;
 }
 /*Connector styles on hover*/
-.tree li a:hover+ul li::after, 
-.tree li a:hover+ul li::before, 
-.tree li a:hover+ul::before, 
-.tree li a:hover+ul ul::before{
+.tree .litree .atree:hover+.ultree .litree::after, 
+.tree .litree .atree:hover+.ultree .litree::before, 
+.tree .litree .atree:hover+.ultree::before, 
+.tree .litree .atree:hover+.ultree .ultree::before{
 	border-color:  #e9453f;
 }
 
-/*Thats all. I hope you enjoyed it.
-Thanks :)*/
+/*MENU*/
+
+.ulmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.limenu {
+    float: left;
+}
+
+.limenu .amenu {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.limenu .amenu:hover:not(.active) {
+    background-color: #111;
+}
+
+.activemenu {
+    background-color: #4CAF50;
+}
