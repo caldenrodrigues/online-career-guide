@@ -1,9 +1,8 @@
 /*Now the CSS*/
-* {margin: 0; padding: 0;}
+* {margin: 0; padding: 0;font-family:sans-serif;}
 
-.tree .ultree {
-	padding-top: 20px; position: relative;
-	
+.tree  {
+	padding-top: 20px;position:relative;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -22,7 +21,7 @@
 
 /*We will use ::before and ::after to draw the connectors*/
 
-.tree .litree::before, .tree li::after{
+.tree .litree::before, .tree .litree::after{
 	content: '';
 	position: absolute; top: 0; right: 50%;
 	border-top: 1px solid #ccc;
@@ -35,7 +34,7 @@
 
 /*We need to remove left-right connectors from elements without 
 any siblings*/
-.tree .litree:only-child::after, .tree li:only-child::before {
+.tree .litree:only-child::after, .tree .litree:only-child::before {
 	display: none;
 }
 
@@ -44,7 +43,7 @@ any siblings*/
 
 /*Remove left connector from first child and 
 right connector from last child*/
-.tree .litree:first-child::before, .tree li:last-child::after{
+.tree .litree:first-child::before, .tree .litree:last-child::after{
 	border: 0 none;
 }
 /*Adding back the vertical connector to the last nodes*/
@@ -99,7 +98,7 @@ right connector from last child*/
 	border-color:  #e9453f;
 }
 
-/*MENU*/
+/*TOP MENU*/
 
 .ulmenu {
     list-style-type: none;
@@ -119,6 +118,7 @@ right connector from last child*/
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size:32px;
 }
 
 .limenu .amenu:hover:not(.active) {
@@ -127,4 +127,39 @@ right connector from last child*/
 
 .activemenu {
     background-color: #4CAF50;
+}
+
+/*SIDE MENU*/
+.ulside {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.liside .aside {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size:30px;
+}
+
+.liside .aside.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.liside .aside:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+.titleside{
+	font-size:32px;
+	font-family:sans-serif;
 }
