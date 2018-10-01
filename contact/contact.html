@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact</title>
+<link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<div>
+		<ul class="ulmenu">
+		  <li class="limenu"><a class="amenu" href="#home">Home</a></li>
+		  <li class="limenu"><a class="amenu" href="../tree/tree10.html">Career Tree</a></li>
+		  <li class="limenu"><a class="amenu" href="#contact">Apptitude Test</a></li>
+		  <li class="limenu"><a class="activemenu amenu" href="#about">Contact</a></li>
+		</ul>
+</div>
+
+<h1>Personal Details</h2>
+<p style="font-size:20px;">Please fill this form with the necessary personal details, the details you fill will be sent to the career guide to help him/her to quickly evaluate you on various levels.</p>
+
+<div class="container">
+  <form action="http://localhost/action_contact.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email ID</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="email" name="email" placeholder="abc@gmail.com">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="number">Phone no.</label>
+      </div>
+      <div class="col-75">
+        <input type="tel" id="number" name="number" placeholder="9800000000">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="completed">Completed</label>
+      </div>
+      <div class="col-75">
+        <select id="completed" name="completed">
+          <option value="10">10th Standard</option>
+          <option value="12">12th Standard</option>
+          <option value="diploma">Diploma</option>
+          <option value="degree">Degree</option>
+          <option value="post Degree">Post Degree</option>
+          <option value="phd">PHD</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="question">Questions about</label>
+      </div>
+      <div class="col-75">
+		<input type="checkbox" name="career" value="career" checked> Career assessment <br>
+		<input type="checkbox" name="resume" value="resume">Resume/cover letter assistance<br>
+		<input type="checkbox" name="internship" value="internship">Internship assistance<br>
+		<input type="checkbox" name="interview" value="interview">Interviewing advice<br>
+		<input type="checkbox" name="job" value="job">Job search assistance<br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="date">Available Date (Your appointment will be scheduled accordingly)</label>
+      </div>
+      <div class="col-75">
+        <input type="date" name="date">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Say Something</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
+
