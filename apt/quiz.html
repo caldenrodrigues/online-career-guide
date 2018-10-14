@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>QUIZ</title>
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+<body>
+<h1 align="center">APTITUDE TEST</h1>
+<hr color="red">
+<form action="grade.php" method="post" id="quiz">
+<font size="5px">
+<h3>1. which of these work seems more intersting to you?</h3>
+    <div>
+        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+        <label for="question-1-answers-A">a)comstruction of brigdge</label>
+    </div>
+    <div>
+        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+        <label for="question-1-answers-B">b)designing colorful posters</label>
+    </div>
+    <div>
+        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+        <label for="question-1-answers-C">c)Making software&website</label>
+    </div>
+    <div>
+        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
+        <label for="question-1-answers-D">d)iam no sure</label>
+   </div>
+</font>
+<a href="q2.html"><input type="button" class="button" value="NEXT" /></a>
+</form>
+</body>
+</html>
